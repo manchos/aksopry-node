@@ -1,0 +1,18 @@
+﻿doctype transitional
+html(lang="ru")
+  head
+    meta(content='text/html; charset=utf-8')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/cupertino/jquery-ui-1.10.3.custom.css')
+    script(type='text/javascript', src='/javascripts/jquery-2.0.3.min.js')
+    script(type='text/javascript', src='/javascripts/jquery-ui-1.10.3.custom.min.js')
+    script(type='text/javascript', src='/javascripts/jquery.ui.datepicker-ru.js')
+    script(type='text/javascript')
+        $(function(){
+            $.datepicker.setDefaults(
+            $.extend($.datepicker.regional["ru"])
+            );
+            $("#datepicker").datepicker({changeYear: true, changeMonth: true});
+        });
+  body
+    block content
